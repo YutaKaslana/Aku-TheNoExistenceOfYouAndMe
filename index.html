@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUNA KASLANA</title>
+<link rel="shortcut icon" href="image/lilithIcon.jpg" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-grid"></div>
+<div class="bg-vignette"></div>
+<div class="scan-line"></div>
+<div class="ambient-particles" id="particles"></div>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Boot Overlay -->
+<div id="boot-overlay">
+  <svg id="boot-line-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="boot-line-path" d="" stroke="#00f0ff" stroke-width="2" fill="none" filter="url(#glow-boot)"/>
+    <defs>
+      <filter id="glow-boot">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">TUNA</div>
+  <ul class="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT ME</a></li>
+    <li><a href="#projects">PROJETCS</a></li>
+    <li><a href="#technology">TECH</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="nav-status">KASLANA<span>FAMILY</span></div>
+</nav>
+
+<!-- ============================================================
+     SECTION 1: HOME
+============================================================ -->
+<section id="home">
+  <div class="live-bg-wrapper">
+    <video autoplay muted loop playsinline class="live-bg-video">
+      <source src="video/the-noexistencen-of-you-and-me-moewalls-com.mp4" type="video/mp4">
+    </video>
+    
+    <div class="bg-overlay"></div>
+  </div>
+
+  <div class="corner-deco tl"></div>
+  <div class="corner-deco tr"></div>
+  <div class="corner-deco bl"></div>
+  <div class="corner-deco br"></div>
+
+  <div class="home-inner" id="home-inner">
+    <div class="home-eyebrow">
+      <div class="blink"></div>
+    </div>
+
+    <h1 id="home-headline">
+      <span class="line1">HI IM A JUNIOR</span><br>
+      <span class="line2">SOFTWARE ENGINEER</span>
+    </h1>
+
+    <p class="home-sub">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo similique doloribus asperiores sequi expedita molestiae quia suscipit enim saepe eaque?
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">PROJECTS</a>
+      <a href="#contact" class="btn-outline">CONTACT</a>
+    </div>
+
+    <canvas id="wave-canvas"></canvas>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2: ABOUT
+============================================================ -->
+<section id="about">
+  <div class="max-w">
+    <div class="section-label">ABOUT SESSION</div>
+        <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
+        <div class="section-divider"></div>
+
+    <div class="about-grid">
+  <div class="biometric-wrapper">
+    <div class="biometric-frame">
+      <img src="image/lilithVertikal.jpg" alt="Resonance Profile" class="avatar-img">
+      
+      <div class="scanner-line"></div>
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner tr"></div>
+      <div class="frame-corner bl"></div>
+      <div class="frame-corner br"></div>
+    </div>
+    <div class="avatar-label">The No Existence Of You And Me</div>
+  </div>
+
+  <div class="about-content">
+    <p>
+      <strong>Signal received.</strong> I am a digital architect operating at the intersection of
+      <span class="highlight">design resonance</span> and <span class="highlight">system frequency</span>.
+      With a focus on building resilient web infrastructure, I decode complexity
+      and transmit clarity through every interface.
+    </p>
+    <p>
+      My approach treats every codebase like an <strong>acoustic chamber</strong> — resonant structures
+      amplify what matters, destructive interference eliminates noise. I specialize in crafting
+      experiences that operate at peak frequency: fast, precise, and impossible to ignore.
+    </p>
+    <p>
+      Born from post-digital chaos, trained in the silence between shockwaves. Currently accepting
+      transmissions from forward-thinking teams who refuse to operate below capacity.
+    </p>
+
+    <div class="resonance-tags">
+      <span class="res-tag">Frontend Architecture</span>
+      <span class="res-tag">Full-Stack Engineering</span>
+      <span class="res-tag">Motion Design</span>
+      <span class="res-tag">System Optimization</span>
+      <span class="res-tag">Google Gemini   API</span>
+      <span class="res-tag">Performance Tuning</span>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3: PROJECTS
+============================================================ -->
+<section id="projects">
+  <div class="max-w">
+    <div class="projects-header">
+      <div>
+        <div class="section-label">PROJECT SESSION</div>
+        <h2 class="section-title">PROJECT <span class="accent">I SOLVED</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <a href="#" class="btn-outline" style="height:fit-content">CHECK MY PORTFOLIO</a>
+    </div>
+
+    <div class="anomaly-grid">
+      <!-- Card 1 -->
+      <div class="anomaly-card">
+        <div class="anomaly-status"></div>
+        <div class="card-id">PROJECT_01</div>
+        <h3 class="card-title">Echo Chamber — Spatial Audio Engine</h3>
+        <p class="card-desc">A real-time 3D audio positioning engine that maps sound frequency data to visual waveform outputs. Processing 1M+ events per second with sub-2ms latency.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">WebAudio API</span>
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">WebGL</span>
+          <span class="tech-tag">Node.js</span>
+        </div>
+        <a href="#" class="card-link">VIEW MATRIX</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="anomaly-card">
+        <div class="anomaly-status gold"></div>
+        <div class="card-id">PROJECT_02</div>
+        <h3 class="card-title">Seismic Cartograph — Fracture Mapping UI</h3>
+        <p class="card-desc">An interactive data visualization platform for geological resonance data. Rendered across 400k+ data points with adaptive frequency clustering algorithms.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <a href="#" class="card-link">VIEW MATRIX</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="anomaly-card">
+        <div class="anomaly-status danger"></div>
+        <div class="card-id">PROJECT_03</div>
+        <h3 class="card-title">Void Protocol — Zero-Trust Security Layer</h3>
+        <p class="card-desc">End-to-end encrypted communication mesh built for hostile network environments. Implements adaptive shielding with quantum-resistant key exchange protocols.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Rust</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">Docker</span>
+        </div>
+        <a href="#" class="card-link">VIEW MATRIX</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="anomaly-card">
+        <div class="anomaly-status"></div>
+        <div class="card-id">PROJECT_04</div>
+        <h3 class="card-title">Waveform OS — Design System</h3>
+        <p class="card-desc">A comprehensive design system built for high-frequency product teams. 200+ components, full token architecture, and automated cross-platform export pipelines.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Figma API</span>
+          <span class="tech-tag">Storybook</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+        <a href="#" class="card-link">VIEW MATRIX</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4: TECHNOLOGY
+============================================================ -->
+<section id="technology">
+  <div class="max-w">
+    <div class="section-label">04 // TECT SESSION</div>
+    <h2 class="section-title">TECH <span class="accent">REQUIREMENTS</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="eq-container" id="eq-container">
+
+      <!-- LOW FREQ: Backend -->
+      <div class="eq-band low">
+        <div class="eq-band-label">⬛ PROGRAMMING LANGUAGE'S</div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Python</span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">PostgreSQL</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Rust</span>
+            <span class="skill-pct">72%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="72"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Redis</span>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78"></div></div>
+        </div>
+      </div>
+
+      <!-- MID FREQ: Architecture -->
+      <div class="eq-band mid">
+        <div class="eq-band-label">◈ SERVICE TOOLS</div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Docker / K8s</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">AWS / Cloud</span>
+            <span class="skill-pct">86%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="86"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">CI/CD Pipelines</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">System Design</span>
+            <span class="skill-pct">94%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="94"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">GraphQL / REST</span>
+            <span class="skill-pct">91%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="91"></div></div>
+        </div>
+      </div>
+
+      <!-- HIGH FREQ: Frontend -->
+      <div class="eq-band high">
+        <div class="eq-band-label">◇ PROFESSIONAL TECH</div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">React / Next.js</span>
+            <span class="skill-pct">96%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="96"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">TypeScript</span>
+            <span class="skill-pct">93%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="93"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">CSS / Animation</span>
+            <span class="skill-pct">97%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="97"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">Figma / Design</span>
+            <span class="skill-pct">89%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="89"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">WebGL / Canvas</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5: SERVICES
+============================================================ -->
+<section id="services">
+  <div class="max-w">
+    <div class="section-label">05 // SERVICE'S</div>
+    <h2 class="section-title">SERVICE <span class="accent">MODULES</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="services-layout">
+      <div class="services-intro">
+        <p>Every engagement is a controlled detonation. I deploy precision-engineered solutions across the full spectrum — from raw UI/UX architecture down through full-stack implementation to hardened optimization layers.</p>
+        <p>Operating at peak interference: where your vision's frequency collides with mine to produce something beyond either source.</p>
+
+        <div class="service-stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">YEARS OF SIGNAL TRANSMISSION</div>
+        </div>
+        <div class="service-stat">
+          <div class="stat-num">40+</div>
+          <div class="stat-label">RESOLVED TASK</div>
+        </div>
+        <div class="service-stat">
+          <div class="stat-num">12</div>
+          <div class="stat-label">ACTIVE CHANNELS</div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordion">
+        <!-- Service 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header active" onclick="toggleAccordion(this)">
+            <span class="acc-num">01</span>
+            <span class="acc-title">ARCHITECTURE — UI/UX</span>
+            <span class="acc-arrow">▶</span>
+          </div>
+          <div class="accordion-body open">
+            <div class="accordion-body-inner">
+              <p>Full-spectrum interface design from concept signal to pixel-perfect transmission. Research, wireframing, interactive prototyping, and design systems built to resonate at scale.</p>
+              <div class="service-features">
+                <span class="svc-feat">User Research</span>
+                <span class="svc-feat">Wireframing</span>
+                <span class="svc-feat">Prototyping</span>
+                <span class="svc-feat">Design Systems</span>
+                <span class="svc-feat">Motion Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="acc-num">02</span>
+            <span class="acc-title">FREQUENCY MODULATION — FULL-STACK</span>
+            <span class="acc-arrow">▶</span>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p>End-to-end engineering from database architecture through API layer to interactive frontend. Built for performance, maintainability, and scale. Zero compromise on signal integrity.</p>
+              <div class="service-features">
+                <span class="svc-feat">API Design</span>
+                <span class="svc-feat">Database Architecture</span>
+                <span class="svc-feat">Frontend Dev</span>
+                <span class="svc-feat">Cloud Deployment</span>
+                <span class="svc-feat">Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="acc-num">03</span>
+            <span class="acc-title">ACOUSTIC SHIELDING — OPTIMIZATION</span>
+            <span class="acc-arrow">▶</span>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p>Hardening systems against performance degradation and adversarial frequencies. Performance audits, security implementation, and architectural refactoring for maximum resilience.</p>
+              <div class="service-features">
+                <span class="svc-feat">Performance Audit</span>
+                <span class="svc-feat">Security Review</span>
+                <span class="svc-feat">Code Refactor</span>
+                <span class="svc-feat">Load Testing</span>
+                <span class="svc-feat">Monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6: CONTACT
+============================================================ -->
+<section id="contact">
+  <div class="max-w">
+    <div class="section-label">06 // CONTACT SESSION</div>
+    <h2 class="section-title">CONTACT <span class="accent">PERSON</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="terminal-form" id="terminal-form">
+          <div class="terminal-header">
+            <div class="term-dot red"></div>
+            <div class="term-dot yellow"></div>
+            <div class="term-dot green"></div>
+            <div class="terminal-path">~/outbound/signal_dispatch.sh</div>
+          </div>
+          <div class="terminal-body">
+            <div class="form-field">
+              <label class="field-label">[EMAIL]</label>
+              <input type="email" class="form-input" placeholder="your@frequency.domain">
+            </div>
+            <div class="form-field">
+              <label class="field-label">[SUBJECT]</label>
+              <input type="text" class="form-input" placeholder="Project Codename / Inquiry Type">
+            </div>
+            <div class="form-field">
+              <label class="field-label">[MESSAGES]</label>
+              <textarea class="form-textarea" placeholder="Describe your anomaly in detail. Include scope, timeline, and resonance requirements..."></textarea>
+            </div>
+            <button id="broadcast-btn"><span>⚡ SEND</span></button>
+          </div>
+          <div id="shockwave-container">
+            <div class="shockwave-ring" id="ring1"></div>
+            <div class="shockwave-ring" id="ring2"></div>
+            <div class="shockwave-ring" id="ring3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <p>All transmissions are received and processed within <strong style="color:var(--white)">24 resonance cycles</strong>. Priority signals are expedited through the Waveform Protocol stack.</p>
+        <p>Direct frequency channels for time-critical anomalies:</p>
+
+        <div class="signal-list">
+          <div class="signal-item">
+            <div class="signal-icon">✉</div>
+            <div class="signal-details">
+              <div class="signal-type">EMAIL DIRECTION</div>
+              <div class="signal-value">exaple@mail.com</div>
+            </div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-icon">◎</div>
+            <div class="signal-details">
+              <div class="signal-type">PERSON</div>
+              <div class="signal-value">@resonance_spectrum</div>
+            </div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-icon">⬡</div>
+            <div class="signal-details">
+              <div class="signal-type">NETWORKING</div>
+              <div class="signal-value">github.com/resonance-spectrum</div>
+            </div>
+          </div>
+          <div class="signal-item">
+            <div class="signal-icon">◈</div>
+            <div class="signal-details">
+              <div class="signal-type">PROFESSIONAL GRID</div>
+              <div class="signal-value">linkedin.com/in/resonance-dev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">BUILD BY <span> ANIME JS</span>// TUNA </div>
+  <div class="footer-status">THIS WEBSITE MAKE BY ❤️</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
